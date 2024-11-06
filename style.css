@@ -1,0 +1,1110 @@
+html{ scroll-behavior: smooth;}  /* Smoothly directs users to the selected section */
+
+body {  /* Adding a background colour */
+    background-color: #E8E4DB;
+    margin: 0;
+}
+
+#menu {display: none;} 
+
+label img {  /* Customizing hamburger menu */
+    color: #fff;
+    margin-left: 3vw;
+    font-size: 1vw;
+    padding: 2vw 0;
+    display: none;  /* Hiding hamburger menu on Destop and tablet screens */
+}
+
+
+
+/* ==========  CUSTOMIZING THE CURSOR APPEARANCE  ============= */
+body {cursor: none;}
+
+.cursor-dot {
+    width: 0.9vw;
+    height: 0.9vw;
+    background-color: #DE4326;
+}
+
+.cursor-outline {
+    width: 2.5vw;
+    height: 2.5vw;
+    border: 0.1vw solid #DE4326;
+    transition: left 0.5s ease, top 0.5s ease;
+}
+
+.cursor-dot, .cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 100000;
+    pointer-events: none;
+}
+
+
+
+/* ==========  CUSTOMIZING THE SOUND ICON  ============= */
+#sound img {
+    position: fixed;
+    bottom:0;
+    right: 0;
+    width: 4.2vw;
+    z-index: 1000;
+    margin: 1.6vw;
+}
+
+
+
+
+/* ------------------------------------------------------------ */
+
+/* ==========  PLACING ELEMENTS IN NAV BAR  ============= */
+.menulist {padding: 0;}
+
+nav { background-color: rgba(0, 0, 0, 0.572);}
+
+nav {
+    position: fixed; /* Set the navbar to fixed position */
+    top: -20%; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 2000;
+}
+
+#nav-container {  
+    position: sticky;   /* Keeps the nav bar at the top of screen at all times */
+    top: 0;
+    overflow: hidden;
+    padding: 1% 0 1% 0;
+} 
+
+#nav-container ul { 
+    list-style: none;
+    text-align: center; /* Centers the links to the middle of the screen */
+    padding: 0;
+    margin: 0;
+}
+
+.menulist li { 
+    display: inline-block; /* Align links in the navigation bar using inline-block */
+    text-align: center;
+}
+
+
+
+/* ==========  Customizing typography in nav bar  ============= */
+.menulist a {
+    font-family: "Cormorant Infant", serif;  /* Setting links to custom fonts */
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menulist a { /* Customizing links in nav bar */
+    text-decoration: none;
+    color: whitesmoke; /* Changing colour of links */
+    display: block;
+    padding-right: 4.5vw; /* Implementing spacing between links */
+    padding-left: 4.5vw;
+    margin: 0.3vw;
+    font-size: 1.6vw;
+    transition: ease 0.2s;
+}
+
+.menulist a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+    color: #DE4326;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+
+/* ==========  STARTING SCREEN ============= */
+#starting-screen {  /* To animate the fade-in effect at the start */
+    animation-name: intro;
+    animation-duration: 2s;
+}
+
+@keyframes intro {  /* Animating the fade-in effect */
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#starting-screen { /* to keep container in the middle of the webpage */
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+
+/* Placing elements on starting screen */
+#skull {  /* Customizing position of skull gif */
+    height: 110vh;
+    position: absolute;
+    right: 55%;
+    top: -10%;
+}
+
+#ink1 { /* Customizing position of ink1 image at the back */
+    width: 230%;
+    height: 100%;
+    position: absolute;
+    right: 40%;
+    z-index: -1000;
+}
+
+/* Creating ripple animation on Discover button in STARTING SCREEN */
+.more-info button {
+    position: relative;
+    overflow: hidden;
+    background: #1c1911;
+    color:#D2D1C6;
+    border-radius: 50px;
+    width: 40%;
+    height: 30%;
+    padding: 1.5% 6%;
+    margin: 1.2vw;
+    font-size: 2vw;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 600;
+    font-style: normal;
+    border: none;
+}
+
+.more-info button:hover {background: #272217;}
+ 
+.more-info button::before { 
+    content: '';
+    position: absolute;
+    background-color: #DE4326;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    border-radius: 50px;
+    transition: all .3s linear;
+}
+
+.more-info button:hover::before {
+    width: 350px;
+    height: 350px;
+}
+
+.more-info button::after {
+    content: 'DISCOVER';
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+/* ============== Styling typography for header and paragraphs in STARTING SCREEN ========== */
+h1, h2, h3, h4,  p {margin: auto;}
+
+h1, h2, h3, h4 {font-family: "Cormorant Infant", serif; }
+
+h1{
+    font-weight: 700;
+    font-style: normal;
+    color: #DE4326;  /* Change colour of header 1 */
+    font-size: 10.6vw;
+    margin: auto;
+}
+
+h2{ 
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5vw;
+}
+
+p{ 
+    font-family: "kohinoor-bangla", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2vw;
+}
+
+
+/* Layering text in STARTING SCREEN */
+.welcome-info { 
+    margin: 1.5vw;
+    float: right;   /* Ensures that id STARTING SCREEN stays on the right side of the screen */
+    position: relative;
+    top: 15%;
+    right: 1.6%;
+}
+
+#preventable-yet {  /* Change position of the words 'preventable yet' in STARTING SCREEN */
+    position: absolute;
+    left: 11vw;
+    top: 10vw;
+}
+
+#deadly {  /* Change position of the word 'deadly' in STARTING SCREEN */
+    position: absolute;
+    left: 26vw;
+}
+
+.more-info {
+    margin-top: 10vw;
+    margin-left: 0;
+    text-align: center;  /* Aligning text to the center of the div welcome-info */
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+
+/* ==========  STATISTICS SCREEN ============= */
+/* Ensures the div is at the center of the screen when displayed */
+#statistic {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+/* Customizing typography for paragraph in STATISTICS SCREEN */
+#statistic-p {
+    position: relative;
+    top: 45vh;
+    font-size: 1.4vw;
+    color: #E8E4DB;
+    text-align: center;
+
+}
+
+
+
+
+/* ------------------------------------------------------------ */
+
+/* ==========  SYMPTOMS SCREEN ============= */
+/* For SL-CAROUSEL */
+#symptoms-p {margin-bottom: 1%;}
+
+.mobile-scroll-hint {display: none;}
+
+/*  Styling typography in for h3 and exposure-screen h4 since they have the same appearance */
+h3, #exposure-screen h4 {
+    font-size: 9vw;
+    color: #D2D1C6;
+    margin-bottom: 3vw;
+    padding: 1.5vw 0 0 0;
+    border-bottom: solid #D2D1C6 2px;
+    width: 65%;
+}
+
+h3 {padding-top: 5vw;}
+
+#symptoms-screen p, #exposure-screen p { color: #D2D1C6;}
+
+#symptoms-screen {
+    display: block;  
+    text-align: center; /* Ensures elements are aligned to the center of the webpage */
+}
+
+/* Customizing the size of images in carousel */
+.scroll-hint {
+    width: 90%;
+    margin: 0 auto; /* Centers the carousel in the middle of the webpage */
+}
+
+.scroll-hint img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* displays the images in full without getting cropped */
+}
+
+
+
+
+/* ======== Creates the slide up animation for div web-content ========== */
+#web-content {
+    display: none; /* Hides the div web-content */
+    animation-name: web-appear;
+    animation-duration: 2s;
+}
+
+
+@keyframes web-appear {  /* Make div web-content slowly appear from bottom to top */
+
+    from {
+        transform: translateY(100%);
+        opacity: 0%;
+    }
+
+    to {
+        transform: translate(0%);
+        opacity: 100%;
+    }
+
+}
+
+body {background-color: #D2D1C6;}
+
+#web-content {
+    position: relative; /* Create a positioned container */
+}
+
+#ink2 {
+    position: absolute;
+    top: 0;  /* Ensures ink2 is located at placed at the center of the webpage at the top */
+    left: 0;
+    width: 100%; 
+    height: 83vw;
+    object-fit: cover; /* Ensures the image is displayed without being distorted */
+    z-index: -900; 
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+
+/* ==========  CAUSES SCREEN ============= */
+.spacer1 {
+    height: 10vw; 
+}
+
+#causes-screen {
+    position: relative;
+    margin-top: 1.5vw;
+    height: auto;
+}
+
+
+/* Customizing typography of h4 in CAUSES SCREEN */
+.causes-text {
+    position: absolute;
+    width: 45%;
+    margin: 4.8vw 2vw 2vw 3.5vw;
+    display: block;
+    align-items: center;  /* Align contents h4 and p in the midde of div causes-text */
+    overflow: hidden;
+    transition: opacity 0.5s ease; /* Transition for smooth appearing */
+}
+
+h4{  /* Customizing the typography for h4 */
+    margin: 0 auto;
+    font-size: 9vw;
+    color: #DE4326;
+    margin-bottom: 3vw;
+    padding: 1.5vw 0 0 0;
+    border-bottom: solid #DE4326 2px;
+    width: 90%;
+    text-align: center;
+}
+
+.causes-text p, .causes-text h4, br {
+    position: relative;
+    left: -100vw;
+}
+
+.causes-text p{margin: 0 0.5vw 0 2.8vw;}
+
+.causes-p {line-height: 2.8vw;} /* Customizing the line height of the paragraphs in .causes-text  */
+
+
+/* Customizing the height of div spacer1 and spacer2 */
+.spacer2 {  
+    height: 7.4vw; 
+    position: relative;
+}
+
+
+/* Customizing the position of the dog gif for its animation */
+.dog-container{
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.dog {
+    position: absolute;
+    right: -100vw;
+    z-index: 9;
+}
+
+.dog-container img {
+    transform: scale(0.95);
+}
+
+.dog:hover img{
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+#down-arrow img { /* for Down arrow */
+    width: 2.4%;
+}
+
+#down-arrow {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 1s cubic-bezier(0.37, 0, 0.63, 1) alternate infinite; /* To create the bouncing animation of the arrow */
+}
+
+/* To shift the arrow from one position to another */
+@keyframes bounce {  
+
+    0% {transform: translateY(0%);}
+
+    100% {transform: translateY(35%);}
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+
+/* ==========  EXPOSURE SCREEN ============= */
+#exposure-screen {
+    position: relative;
+    margin: 2vw 0 8vw 0;
+    height: 100%;
+}
+
+#ink3-container{
+    position: absolute;
+    height: 150%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Customizing the size of ink3 in EXPOSURE SCREEN */
+#ink3 {
+    position: absolute;
+    top: 0;
+    width: 150vw;
+    height: auto;
+    z-index: -10;
+    left: -150vw;
+}
+
+.spacer3 {  
+    height: 1.5vw; 
+    position: relative;
+}
+
+/* Ensures that the texts in the EXPOSURE SCREEN are centered in the middle of the webpage */
+.exposure-text {
+    display: block;
+    text-align: center;
+    padding-top: 5.5vw;
+}
+
+.exposure-text h2{ /* Customizing the typography and positions of the h2 in the EXPOSURE SCREEN */
+    color: #92918c;
+    margin: 0;
+    position: absolute;
+    left: 25%;
+}
+
+.exposure-text h4 { padding-top: 0%;}
+
+#exposure-screen p {width: 45%;}
+
+/* Customizing the placement of the images and their details */
+.exposure-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exposure-details p {
+    text-align: center;
+    margin: 5% 0 0 0;
+}
+
+.exposure-details img {
+    margin-top: 7vw;
+    width: 19vw;
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    z-index: 5;
+}
+
+.exposure-details img:hover {transform: scale(1.2);}  /* Increase the size of the images in EXPOSURE when hovered over */
+
+.exposure-details {  
+    display: flex;  /* Ensures the images and their details in EXPOSURE SCREEN are at the center of the screen when displayed */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width:38%;
+}
+
+.number {  /* Customizing the typography of the numbers in EXPOSURE SCREEN */
+    margin: 3vw 0 0 0;
+    padding: 1% 2.5% 1% 2.5%;
+    font-size: 1.8vw;
+    color: #1c1911;
+    background-color: #D2D1C6;
+    border-radius: 100%;
+    border: none;
+}
+
+#line-container {   /* Customizing the size and position of the horizontal line in EXPOSURE SCREEN */
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 37%;
+    margin: auto;
+    top: -8.5vw;
+    left: 0.5%;
+    z-index: 6;
+    overflow: hidden;
+}
+
+#line {
+    position: relative;
+    left: -100%;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+
+/* ==========  PREVENT SCREEN ============= */
+#prevent-screen {
+    margin-top: 5vw;
+    display: flex;
+}
+
+/* Customizing the placement of h4 and p in .prevent-text */
+.prevent-text {
+    position: relative;
+    width: 48%;
+    margin: 11vw 1.8vw 4vw 4vw;
+    display: block;
+    align-items: center;  /* Align contents h4 and p in the midde of div prevent-text */
+    left: 40.8%;
+    overflow: hidden;
+}
+
+.prevent-text h4 {
+    margin-top: 1vw;
+    padding-top: 0;
+    width: 100%;
+    font-size: 8.4vw;
+}
+
+.prevent-text p {
+    line-height: 2.8vw;  /* Customizing the line height of the paragraphs in .prevent-text  */
+    margin: 0 0.5vw 0 0.5vw;
+} 
+
+.prevent-text h4, .prevent-text p {  /* Hiding h4 and p for their slide-in animation with Scroll Trigger */
+    position: relative;
+    right: -100%;
+}
+
+.bat {  /* Hiding the bat gif for their slide-in animation with Scroll Trigger */
+    position: absolute;
+    z-index: 2;
+    left: -45%;
+}
+
+/* Customizing the size of the bat gif */
+.bat img {
+    transform: scale(0.90);}
+
+.bat:hover img{
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0.96);
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+
+/* ==========  END SCREEN ============= */
+footer {
+    margin-top: 5vw;
+    height: 20%;
+    display: block;  
+    text-align: center; /* Ensures elements are aligned to the center of the webpage */
+}
+
+.spacer4 {  
+    height: 6.5vw; 
+    position: relative;
+}
+
+
+/* Cuztomizing position of ink4 */
+#ink4 {
+    position: absolute;
+    bottom: -13vw;
+    left: 0;
+    width: 100%; 
+    height: 50vw;
+    object-fit: cover; /* Ensures the image is displayed without being distorted */
+    z-index: -900; 
+}
+
+#end-info {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+/* Customizing the colour of p in END-INFO */
+#end-info p {
+    color: #D2D1C6;
+    font-style: normal;
+}
+
+
+/* For the repetitive animation of the logo in END-INFO */
+#logo {
+    padding: 8vw 0 0.4vw 0;
+    margin: auto;
+    width: 14%;
+    height: 80%;
+    animation: fill 8s ease-in-out forwards 20s infinite;
+}
+
+#logo path:nth-child(6) {
+    stroke-dasharray: 478;
+    stroke-dashoffset: 478;
+    animation: fill 7s ease-in-out forwards 0.3s infinite;
+}
+
+#logo path:nth-child(5) {
+    stroke-dasharray: 419;
+    stroke-dashoffset: 419;
+    animation: fill 7s ease-in-out forwards 0.3s infinite;
+}
+
+#logo path:nth-child(4) {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: fill 7s ease-in-out forwards 0.3s infinite;
+}
+
+#logo path:nth-child(3) {
+    stroke-dasharray: 246;
+    stroke-dashoffset: 246;
+    animation: fill 7s ease-in-out forwards 0.3s infinite;
+}
+
+#logo path:nth-child(2) {
+    stroke-dasharray: 465;
+    stroke-dashoffset: 465;
+    animation: fill 7s ease-in-out forwards 0.3s infinite;
+}
+
+#logo path:nth-child(1) {
+    stroke-dasharray: 384;
+    stroke-dashoffset: 384;
+    animation: fill 7s ease-in-out forwards 0.3s infinite;
+}
+
+@keyframes line-anim {
+    to {stroke-dashoffset: 0;} 
+}
+
+@keyframes fill {
+    from {fill: transparent;}
+
+    to {fill: #DE4326;}
+}
+
+#sponsor {
+    width: 6vw;
+    padding: 0.4vw 2vw 2vw 2vw;
+}
+
+#sponsored-p {
+    font-size: 0.4vw;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+#copyright {
+    font-size: 1vw;
+    font-weight: 300;
+    opacity: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================  RESPONSIVE DESIGN  ============================== */
+
+/* ===== DESKTOP: Media queries for desktop ===== */
+@media screen and (max-width: 1024px) {
+    #statistic-p {top: 28vw;}
+}
+
+
+
+
+/* ===== MOBILE: Media queries for small mobile resolution. ===== */
+
+@media only screen and (max-width: 768px) { 
+
+    /* ===== STARTING SCREEN ===== */
+    /* expand the size of ink1 to cover the entire background */
+    #ink1 {
+        width: 250vh;
+        height: 100vh;
+        position: absolute;
+        right: -100%;
+    }
+
+    #skull {  /* Customizing position of skull gif */
+        height: 58vh;
+        right: 12vw;
+        top: 44%;
+    }
+    
+    .welcome-info {
+        top: 8%;
+        position: relative;
+        float: none;
+        right: 0;
+        width: 100vw;
+        display: block;  
+        text-align: center;  /* Ensuring that text in welcome info are placed in the middle of the screen */
+    }
+
+    .welcome-info p {
+        color: #D2D1C6;  /* Customizing colour of p in welcome-info */
+        margin: 2vw;
+    }
+
+    h1 {font-size: 20vw;}
+
+
+    #preventable-yet, #deadly {
+        color: #d2d1c67e;
+        font-size: 4vw;
+    }
+
+    #preventable-yet {  /* Changing the position of text 'preventable-yet' */
+        left: 40vw;
+        top: 20vw;
+    }
+
+    #deadly {  /* Changing the position of the text 'deadly' */
+        padding-top: 0.8vw;
+        left: 68%;
+    }
+
+    .more-info {
+        margin-top: 10vw;
+    }
+
+    .more-info button {  /* Customizing appearance of button in starting screen */
+        background: #D2D1C6;
+        color:#1c1911;
+        width: 28%;
+        font-size: 3.5vw;
+    }
+
+
+
+
+
+
+
+
+    /* ===== STATISTIC SCREEN */
+    #statistic-p {
+        top: 45vh;
+        font-size: 2.8vw;
+    }
+
+    /* ===== Customizing typography and sizes of elements in menu bar ===== */
+    #sound img {
+        width: 8.4vw;
+        margin: 3.2vw;
+    }
+
+    label img { 
+        display: block; /* For drop down nav bar in mobile screens */
+        width: 6vw;  /* Customizing size of menu icon */
+        margin: 1% 0 1% 2%; 
+        padding: 2px 0;
+    } 
+    
+    main {margin-top: 9%;}
+    
+    #nav-container {
+        position: relative;
+        z-index: 10;
+        padding: 0.5vw 0 0.5vw 0;
+        overflow: auto;
+        overflow: visible;
+    }
+
+    nav ul { /* Displaying links in a column inside the hamburger menu */
+        position: absolute;
+        top: 100%;
+        left: -105%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100vh;
+        transition: .2s; 
+    }
+
+    #menu:checked ~ .menulist {  /* Makes hamburger menu interactive */
+        transition: .2s;
+        left: 0;
+        background-color: #000000c1;
+    } 
+
+    nav ul.menulist li {
+        margin: 0 !important; /* Will overwrite the previous margin-left styling */
+        padding-top: 20px;
+        width: 100vw;
+    }
+
+    /* Changing font size of links in new nav bar */
+    .menulist li a {
+        padding: 0.5vw 0 0.5vw 0;
+        font-size: 3vw;
+        font-family: "kohinoor-bangla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
+
+
+
+
+
+
+    /* ===== SYMPTOMS SCREEN ===== */
+    .scroll-hint {display: none;}  /* Hides the desktop sl-carousel version */
+
+    /* Display the sl-carousel mobile version */
+    .mobile-scroll-hint {
+        display: block;
+        margin-top: 5vw;
+    }
+
+    /* Customizing the typography of h3 */
+    h3 {
+        font-size: 12vw;
+        padding-top: 8vw;
+        width: 80%;
+        margin-bottom: 2vh;
+    }
+
+    /* Customizing the size of ink2 in the background */
+    #ink2 {
+        position: absolute;
+        width: 100vw;
+        height: 172vw;
+    }
+
+    p {
+        font-size: 2vw;  /* Customizing typography of p in SYMPTOMS SCREEN */
+        padding: 0.8vw;
+    }
+
+    #symptoms-p p{
+        margin-bottom: 2%;
+        width: 65%;
+    }
+
+
+
+
+
+
+
+
+
+    /* ===== CAUSES SCREEN ===== */
+    #causes-screen {
+        margin-top: 16vw;
+    }
+
+    .dog-container {height: 38vh;}
+
+    .dog {
+        position: absolute;
+        top: 2vh;
+        right: -126vw;
+        z-index: 9;
+    }
+    
+    .dog-container img {transform: scale(1.6);}
+
+    .dog:hover img{
+        transition: none;   /* Keeps the size of the dog gif constant when users click on them */
+        transform: scale(1.6);
+    }
+
+    .causes-text {
+        width: 58%;
+        margin: 4.8vw 2vw 2vw 3.5vw;
+        margin-top: 0;
+    }
+    
+    h4{  /* Customizing the typography for h4 */
+        font-size: 11.8vw;
+    }
+    
+    .causes-text p, .causes-text h4, br {
+        position: relative;
+        left: -100vw;
+    }
+    
+    
+    .causes-text p{margin: 0 0.5vw 0 2.8vw;}
+    
+    .causes-p {line-height: 2.8vw;} /* Customizing the line height of the paragraphs in .causes-text  */
+
+
+
+
+    /* ===== EXPOSURE SCREEN ===== */  
+    .spacer2 {height: 8vh;}
+
+    .spacer3 {height: 0;}
+
+    #ink3 {  
+        width: 120vw;
+        height: 120vw;
+    }
+
+    #exposure-screen h4 {font-size: 12vw;}
+
+    #exposure-screen h2 { /* Customizing typography of h2 in mobile EXPOSURE SCREEN */
+        font-size: 4vw;
+        padding: 0 0 2vw 0;
+        top: 4vw;
+    }
+
+    #exposure-screen p {width: 72%;}
+
+    .exposure-details {margin: 0 4vw 0 4vw;}
+
+    .exposure-details img {  /* Changing the positions of the images in exposure-details */
+        width: 34vw;
+        margin-top: 3vw;
+        margin-bottom: 2vw;
+    }
+
+    .exposure-details button { /* Customizing the size of the button in exposure-details */
+        width: 5.5vw;
+        height: 5.5vw;
+        font-size: 3.2vw;
+    }
+
+    #line-container { /* Customizing the size and position of the horizontal line in mobile EXPOSURE SCREEN */
+        width: 45%;
+        top: -15vw;
+    }
+    
+
+
+
+
+
+
+    /* ===== PREVENT SCREEN ===== */
+    .prevent-text {margin-top: 10vw;}
+
+    .bat { /* Customize the position of the bat gif in mobile PREVENT SCREEN */
+        position: absolute;
+        z-index: 2;
+        left: -50%;
+        bottom: 55vw;
+    }
+    
+    .bat img {transform: scale(1.3);}
+
+    .bat:hover img{ /* Keeps the size of the bat constant when users click on them */
+        transition: none;
+        transform: scale(1.3);
+    }
+
+
+
+
+    /* ===== END SCREEN ===== */
+    #ink4 {   /* Customizing size of ink4 in the background */
+        bottom: -15vw;
+        width: 100vw;
+        height: 65vw;
+    }
+
+    #logo { /* Customizing size of logo in footer */
+        width: 25vw;
+    }
+
+    #sponsored-p {font-size: 1.8vw;}
+
+    #copyright { 
+        font-size: 1.6vw;
+        padding: 0 0 2vw 0;
+    }
+    
+}

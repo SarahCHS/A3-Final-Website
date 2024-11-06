@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RABIES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">  <!-- for custom font from Google Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/new0hcp.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css"/>  <!-- for shoelace component -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace-autoloader.js"></script>  
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <nav>
+            <div id="nav-container">
+                <input type="checkbox" id="menu">  <!-- for the hamburger icon in responsive mobile screen -->
+                <label for="menu"> 
+                    <img src="images/menu.png" alt="Menu"> <!-- Tumdee. 2017. “Menu icon illustration design stock illustration.” iStockphoto LP. https://www.istockphoto.com/vector/menu-icon-illustration-design-gm666651358-121549581. -->
+                </label> 
+
+                <ul class="menulist"> 
+                    <li> <a href="#symptoms-screen">SYMPTOMS</a> </li>  <!-- for links in nav bar -->
+                    <li> <a href="#causes-screen">CAUSES</a> </li>
+                    <li> <a href="#exposure-screen">EXPOSURE</a> </li>
+                    <li> <a href="#prevent-screen">PREVENTIONS</a> </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- for CUSTOM CURSOR -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+
+
+    <!-- for BACKGROUND MUSIC -->
+    <div id="sound">
+        <sl-tooltip content="Sound on/off"  style="--sl-tooltip-arrow-size: 0;">  <!-- include a tooltip component for the sound icon -->
+            <img id="sound-icon" src="/images/soundoff.png" alt="Sound On">  <!-- Adobe Stock. n.d. “Speaker Set Icon. Sound Icon, Vector Illustration. Sound on off icon set . Speaker on and muted volume icons .” Adobe. Accessed November 4, 2024. https://stock.adobe.com/in/images/speaker-set-icon-sound-icon-vector-illustration-sound-on-off-icon-set-speaker-on-and-muted-volume-icons/712873595?asset_id=712873595. -->
+        </sl-tooltip>
+
+        <audio id="mysong" autoplay>
+            <source src="audio/background.mp3" type="audio/mp3">  <!-- Jurrivh. 2023. Gone Forever - Sad & Emotional Piano Song Instrumental. Youtube video, 2:51. https://www.youtube.com/watch?v=mVELNfcufds. -->
+        </audio>
+    </div>
+
+
+
+
+
+
+    <!-- for STARTING SCREEN of the webpage -->
+    <div id="starting-screen">
+        <div class="start-screen"> 
+            <img id="skull" src="/video/skull.gif" alt="Skull">  <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/707205947773243742/. -->
+
+            <img id="ink1" src="/images/ink1.png" alt="Ink1"> <!-- Clipart Library. n.d. “black paint splash png.” Clipart Library. Accessed November 4, 2024. https://clipart-library.com/clipart/499655.htm. -->
+        </div>
+
+        <div class="welcome-info">  <!-- for the text information on the starting screen -->
+            <h1> RABIES </h1>
+            <h2 id="preventable-yet"> PREVENTABLE YET</h2>
+            <h2 id="deadly"> DEADLY </h2>
+            
+            <div class="more-info">
+                <p> The deadly virus that destroys the nervous system. </p>
+
+                <button class="discover"><span></span></button> <!-- for discover button -->
+            </div>
+        </div>
+    </div>
+
+    <!-- to show the statistics texts -->
+    <div id="statistic"> 
+        <p id="statistic-p"> About 59,000 people around the world die each year from rabies. </p>
+    </div>
+
+
+    <div id="web-content">
+
+        <!-- for SYMPTOMS SECTION of the webpage -->
+        <section id="symptoms-screen"> 
+
+            <!-- for the ink background at the back of symptoms screen -->
+            <img id="ink2" src="/images/ink2.png" alt="Ink2"> <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/11118330327672444/. -->
+
+            <h3> SYMPTOMS </h3>
+
+            <div id="symptoms-p">
+                <p> While most people know the name of the disease, many are still unaware of its effects on the human body. </p>
+                <p> By the time the symptoms appear, the disease is already 100% fatal. </p>
+            </div>
+
+            <!-- for the shoelace carousel images -->
+            <sl-carousel class="scroll-hint" navigation pagination>  
+
+                <sl-carousel-item>
+                    <img alt="Stage1" src="/images/stage1.png"> <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/27654985206806313/. -->
+                </sl-carousel-item>
+
+                <sl-carousel-item>
+                  <img alt="Stage2" src="/images/stage2.png"> <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/6051780743902833/. -->
+                </sl-carousel-item>
+
+                <sl-carousel-item>
+                  <img alt="Stage3" src="/images/stage3.png"> <!-- freeject.net Design. 2020. “free download DEMO Virus Hand Drawn Illustration.” Bēhance. https://www.behance.net/gallery/94651161/free-download-DEMO-Virus-Hand-Drawn-Illustration. -->
+                </sl-carousel-item>
+
+                <sl-carousel-item>
+                  <img alt="Stage4" src="/images/stage4.png"> <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/6051780743902833/. -->
+                </sl-carousel-item>
+
+                <sl-carousel-item>
+                  <img alt="Stage5" src="/images/stage5.png"> <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/6051780743902833/. -->
+                </sl-carousel-item>
+
+            </sl-carousel> 
+
+
+            <!-- for the mobile shoelace carousel images -->
+            <sl-carousel class="mobile-scroll-hint" navigation pagination style="--aspect-ratio: 5/6;">  
+
+                <sl-carousel-item>
+                    <img alt="MStage1" src="/images/mcarousel1.png"> <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/27654985206806313/. -->
+                </sl-carousel-item>
+
+                <sl-carousel-item>
+                  <img alt="MStage2" src="/images/mcarousel2.png"> <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/6051780743902833/. -->
+                </sl-carousel-item>
+
+                <sl-carousel-item>
+                  <img alt="MStage3" src="/images/mcarousel3.png"> <!-- freeject.net Design. 2020. “free download DEMO Virus Hand Drawn Illustration.” Bēhance. https://www.behance.net/gallery/94651161/free-download-DEMO-Virus-Hand-Drawn-Illustration. -->
+                </sl-carousel-item>
+
+                <sl-carousel-item>
+                  <img alt="MStage4" src="/images/mcarousel4.png"> <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/6051780743902833/. -->
+                </sl-carousel-item>
+
+                <sl-carousel-item>
+                  <img alt="MStage5" src="/images/mcarousel5.png"> <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/6051780743902833/. -->
+                </sl-carousel-item>
+
+            </sl-carousel> 
+            
+        </section>
+
+
+
+
+
+
+        <!-- for CAUSES SECTION of the webpage -->
+        <section id="causes-screen">
+
+            <div class="spacer1"></div>  <!-- to create a space area before the next div -->
+
+            <!-- for the text div in the causes-screen -->
+            <div class="causes-text">  
+                <h4>CAUSES</h4>
+
+                <p> While rabies can be caused by several factors, it is mostly transmitted through contact with infected animals. The most common ones include: </p>
+                <br>
+                <br>
+                <p class="causes-p"> • Being infected <span style="color:#DE4326; font-weight:bold">animal bites </span> and scratches. </p>
+                <p class="causes-p"> • Spread with saliva. </p>
+                <p class="causes-p"> • By pets and farm animals: cows, dogs, cats, horses. </p>
+                <p class="causes-p"> • By wild animals: bats, foxes, wolves, monkeys, and coyotes. </p>
+            </div>
+
+            <!-- acts as the parent div container for dog gif -->
+            <div class="dog-container">   
+                <div class="dog"> 
+                    <img src="/video/dog.gif" style="width: 62vw" alt="Dog">  <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/5911043256448056/. -->
+                </div>
+            </div>
+
+            <audio id="dog-sound" src="/audio/doggrowling.mp3"></audio>   <!-- Sound Effect USA. 2021. Dog Growling And Barking Sound. YouTube video, 0:06. https://www.youtube.com/watch?v=aRBZYivvR74. -->
+              
+            <!-- including an sl-icon-->
+            <div id="down-arrow" style="font-size: 4vw;">
+                <sl-icon name="chevron-double-down"></sl-icon>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- for EXPOSURE SECTION of the webpage -->
+        <section id="exposure-screen">
+
+            <div id="ink3-container">
+                <img id="ink3" src="/images/ink3.png" alt="Ink3"> <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/49117452179027980/. -->
+            </div>
+
+            <div class="spacer2"></div>  <!-- to create a space area before the next div -->
+
+            <div class="exposure-text">  <!-- for the main texts in the exposure-screen-->
+                <div class="spacer3"></div> 
+                <h2> IN CASE OF </h2>
+                <h4> EXPOSURE </h4>
+                <p>Do not panic! In cases where you have had contact with infected animals, follow the two steps below right away. </p>
+            </div>
+
+            <div class="exposure-images">  <!-- to contain the images and details in EXPOSURE SECTION -->
+                <div class="exposure-details"> <!-- step 1 of EXPOSURE SECTION -->
+                    <img src="images/water.png" height="200" alt="Water">  <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/4503668371596396/. -->
+                    <button class="number"> 1 </button>
+                    <p> Wash the exposed surface for at least 15 minutes.</p>
+                </div>
+
+                <div class="exposure-details"> <!-- step 2 of EXPOSURE SECTION -->
+                    <img src="images/stethoscope.png" height="200" alt="Stethoscope"> <!-- AlexArt. 2018. “Doctor tools engraving vector illustration.” Creative Market. https://creativemarket.com/niveus/2181882-Doctor-tools-engraving-vector-illustration?u=radcat&epik=dj0yJnU9MEx1TXR3OE5VdDRUdlYtV1h2VVdJeDFIUkg0UlBpRHEmcD0wJm49dGFXU2x6UThUZG0xUDRZTnVuV1ZGZyZ0PUFBQUFBR2NxVDNj. -->
+                    <button class="number"> 2 </button>
+                    <p> Drive to your local hospital for immediate vaccination.</p>
+                </div>
+
+            </div>
+
+            <div id="line-container"> <!-- for the dash line in EXPOSURE SECTION -->
+                <svg id="line" viewBox="0 0 653 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 2.5H650" stroke="#D2D1C6" stroke-width="5" stroke-linecap="round" stroke-dasharray="25 25"/>
+                </svg>
+            </div>
+
+        </section>
+
+
+        <!-- for PREVENT SECTION of the webpage -->
+        <section id="prevent-screen">
+
+            <div class="bat"> 
+                <img src="/video/bat.gif" style="width: 62vw" alt="Bat">  <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/27936460191602562/. -->
+            </div>
+
+            <audio id="bat-sound" src="/audio/batsound.mp3"></audio>  <!-- Sound Effect Database. 2021. Bird Flapping Wings Sound Effect. YouTube video, 0:19. https://www.youtube.com/watch?v=pnkIHN22iD4. -->
+
+            <!-- for the text div in the prevent-screen -->
+            <div class="prevent-text">
+                <h4>PREVENT IT</h4>
+
+                <p> The best thing to prevent such problem is to first eliminate any possibility of the disease infecting you. For this, several easy steps can be taken: </p>
+                <br>
+                <br>
+                <p class="prevent-p"> • Ensure that your pets are up-to-date with their <span style="color:#DE4326; font-weight:bold">rabies vaccinations.</span> </p>
+                <p class="prevent-p"> • Do not approach or provoke wild and stray animals carelessly. </p>
+                <p class="prevent-p"> • Vaccinate yourself. </p>
+                <p class="cprevent-p"> • Detect and alert new potential cases as early as possible. </p>
+                <p class="prevent-p"> • Do not let your pets roam without supervision outside. </p>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- for END SECTION of the webpage -->
+        <footer id="end-screen"> 
+
+            <img id="ink4" src="/images/ink4.png" alt="Ink4">  <!-- Pinterest. n.d. Pinterest. Accessed November 4, 2024. https://www.pinterest.com/pin/11118330327672444/. -->
+
+            <div class="spacer4"></div>  <!-- to create a space area before the next div -->
+
+            <div id="end-info">
+                <p class="quote"> Protect yourself, your health, and your life. </p>
+                <p class="quote"> Before its too late. </p>
+
+                <!-- for svg logo in END SCREEN -->
+                <svg id="logo" width="406" height="85" viewBox="0 0 406 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M400.191 72.1004L400.196 72.0933L400.2 72.0861C402.619 68.5446 403.822 64.5269 403.822 60.0802C403.822 56.2414 402.924 52.8042 401.083 49.8204C399.318 46.8806 397.164 44.3852 394.619 42.3489C392.163 40.3842 388.917 38.1137 384.896 35.5403C381.235 33.1527 378.355 31.1393 376.243 29.4962C374.21 27.9155 372.482 26.0756 371.054 23.9736C369.788 21.9989 369.142 19.7302 369.142 17.1202C369.142 13.8958 370.047 11.6719 371.647 10.1939C373.409 8.63945 375.675 7.82018 378.562 7.82018C382.939 7.82018 386.194 9.39592 388.522 12.5002L388.528 12.5088L388.535 12.5173C391.153 15.9052 393.448 20.0564 395.407 24.9934L395.413 25.0079L395.419 25.0223L396.365 27.2676C396.566 27.7995 396.984 28.2021 397.527 28.3832C398.003 28.5416 398.461 28.4941 398.776 28.431L398.911 28.404L399.039 28.3529C399.525 28.1586 400.582 27.6059 400.582 26.3602V8.72017C400.582 7.98591 400.431 7.21514 399.967 6.56266C399.488 5.80832 398.695 5.30691 397.891 4.94946L397.87 4.94035L397.85 4.93185C395.951 4.15519 393.518 3.53311 390.588 3.0439C387.625 2.46899 384.696 2.18018 381.802 2.18018C377.393 2.18018 373.178 2.92879 369.168 4.43086C365.095 5.87555 361.711 8.18329 359.052 11.3568L359.052 11.3568L359.049 11.3599C356.395 14.5447 355.102 18.4581 355.102 23.0002C355.102 26.5931 355.917 29.7934 357.603 32.544L358.86 31.7734L357.603 32.544C359.201 35.151 361.103 37.3954 363.313 39.2653L363.323 39.2742L363.334 39.283C365.555 41.0923 368.605 43.2455 372.465 45.7382C376.362 48.2832 379.39 50.4488 381.57 52.2393C383.663 53.9587 385.427 56.0573 386.862 58.5486L386.87 58.5632L386.879 58.5776C388.318 60.9517 389.062 63.755 389.062 67.0402C389.062 70.9827 388.076 73.41 386.485 74.7643C384.724 76.1814 382.441 76.9402 379.522 76.9402C376.367 76.9402 373.545 75.9124 371.007 73.812C368.416 71.6003 366.246 69.0496 364.493 66.156C362.77 63.1793 360.726 59.2907 358.358 54.4807C358.21 54.0591 357.912 53.628 357.393 53.3685C356.922 53.1333 356.449 53.1318 356.093 53.184C355.741 53.2024 355.272 53.2951 354.855 53.6289C354.312 54.0633 354.142 54.6692 354.142 55.1602V55.2802V55.2943L354.142 55.3085L354.502 74.3749C354.503 75.0872 354.586 75.8419 354.9 76.471L355.009 76.6887L355.181 76.8608C355.468 77.1481 355.825 77.4589 356.238 77.7899C357.89 79.2314 360.827 80.4126 364.737 81.45L364.754 81.4546L364.772 81.4588C368.868 82.4418 372.746 82.9402 376.402 82.9402C381.465 82.9402 386.078 82.0264 390.216 80.1686L390.216 80.1686L390.229 80.1629C394.439 78.2262 397.779 75.545 400.191 72.1004Z" stroke="#DE4326" stroke-width="3"/>
+                    <path d="M290.517 76.537L290.501 76.542L290.486 76.5474C289.627 76.8543 288.011 77.06 285.471 77.06C285.148 77.06 284.799 77.1449 284.481 77.3569C284.173 77.5626 283.978 77.8312 283.859 78.0691C283.642 78.5026 283.611 78.9634 283.611 79.28C283.611 79.5966 283.642 80.0574 283.859 80.4909C283.978 80.7288 284.173 80.9974 284.481 81.2031C284.799 81.4151 285.148 81.5 285.471 81.5H338.511C338.943 81.5 339.375 81.4651 339.775 81.3652C340.165 81.2676 340.631 81.0815 341.012 80.7007L341.087 80.6253L341.151 80.54C341.671 79.8459 341.811 78.9842 341.811 78.2C341.811 73.1562 342.205 67.5412 342.999 61.3507L343.011 61.2558V61.16C343.011 60.3235 342.403 59.8921 342.253 59.7918C342.14 59.7168 342.024 59.6568 341.916 59.6085C341.511 59.3194 341.038 59.18 340.551 59.18C340.314 59.18 339.913 59.2016 339.52 59.3984C339.302 59.5074 339.048 59.6894 338.853 59.983C338.727 60.1718 338.648 60.3717 338.607 60.5687C336.924 65.6303 334.347 69.2451 330.947 71.5601C327.512 73.8983 322.839 75.14 316.791 75.14H312.831C311.2 75.14 310.315 74.675 309.81 74.0333C309.233 73.2984 308.811 71.9792 308.811 69.8V44.18H317.151C321.698 44.18 324.919 45.1096 327.033 46.7461L327.054 46.7624L327.075 46.778C329.225 48.323 330.291 50.4198 330.291 53.24C330.291 54.3165 331.181 54.7377 331.497 54.843C331.851 54.9612 332.227 54.98 332.511 54.98C332.795 54.98 333.171 54.9612 333.525 54.843C333.841 54.7377 334.731 54.3163 334.731 53.24C334.731 51.603 334.65 49.4193 334.49 46.7004L334.371 40.9927L334.491 30.2167L334.491 30.2083V30.2C334.491 29.8776 334.406 29.5285 334.194 29.2105C333.988 28.9019 333.72 28.7074 333.482 28.5884C333.048 28.3716 332.587 28.34 332.271 28.34C331.97 28.34 331.495 28.3764 331.049 28.6437C330.482 28.9843 330.171 29.5717 330.171 30.2C330.171 32.5554 329.202 34.3275 327.138 35.6596C325.002 37.0375 321.774 37.82 317.271 37.82H308.811V14.84C308.811 12.9207 309.306 11.7943 310.012 11.1392L308.991 10.04L310.012 11.1392C310.733 10.4697 312.042 9.98 314.271 9.98H317.871C322.611 9.98 326.269 11.0493 328.981 13.0476C331.683 15.0387 333.689 18.1528 334.905 22.5589L334.915 22.5969L334.928 22.6343C335.117 23.2023 335.549 23.6338 336.117 23.823C336.579 23.9773 337.026 23.9363 337.34 23.8758C337.624 23.8274 337.969 23.748 338.282 23.5916C338.544 23.4603 339.291 23.0055 339.291 22.04V22.0287L339.291 22.0174L339.051 6.06686C339.048 5.43538 338.863 4.703 338.254 4.15505C337.671 3.63034 336.945 3.5 336.351 3.5H285.471C285.148 3.5 284.799 3.58493 284.481 3.79691C284.173 4.00263 283.978 4.2712 283.859 4.50914C283.642 4.94259 283.611 5.40336 283.611 5.72C283.611 6.03663 283.642 6.49741 283.859 6.93085C283.978 7.1688 284.173 7.43736 284.481 7.64308C284.799 7.85507 285.148 7.93999 285.471 7.93999C287.903 7.93999 289.507 8.18216 290.434 8.55271L290.475 8.56908L290.517 8.58302C291.311 8.84797 291.744 9.28949 291.978 9.9445C292.287 10.8099 292.491 12.3536 292.491 14.72V70.28C292.491 72.6235 292.292 74.2228 291.973 75.1899C291.738 75.837 291.306 76.274 290.517 76.537ZM333.171 30.2C333.171 30.2007 333.171 30.2013 333.171 30.202V30.2Z" stroke="#DE4326" stroke-width="3"/>
+                    <path d="M275.295 4.93999C275.295 4.93999 275.294 4.94 275.294 4.94L275.295 4.93999ZM244.575 4.93999C244.576 4.93999 244.576 4.93999 244.576 4.93999L244.575 4.93999ZM251.222 75.1229L251.212 75.149L251.203 75.1755C250.969 75.8305 250.536 76.272 249.741 76.537C248.781 76.8568 247.104 77.06 244.575 77.06C243.499 77.06 243.078 77.9496 242.972 78.2656C242.854 78.6201 242.835 78.9962 242.835 79.28C242.835 79.5638 242.854 79.9399 242.972 80.2944C243.078 80.6104 243.499 81.5 244.575 81.5C247.29 81.5 249.47 81.4604 251.103 81.3795L259.935 81.2601L269.006 81.3795C270.562 81.4604 272.662 81.5 275.295 81.5C275.618 81.5 275.967 81.4151 276.285 81.2031C276.593 80.9973 276.788 80.7287 276.907 80.4908C277.124 80.0573 277.155 79.5966 277.155 79.28C277.155 78.9634 277.124 78.5027 276.907 78.0692C276.788 77.8313 276.593 77.5627 276.285 77.3569C275.967 77.1449 275.618 77.06 275.295 77.06C272.78 77.06 271.107 76.8589 270.145 76.5421C269.457 76.2926 269.035 75.8671 268.788 75.1755C268.48 74.3132 268.275 72.7332 268.275 70.28V14.96C268.275 12.5936 268.479 11.0499 268.788 10.1845L268.793 10.1695L268.798 10.1543C269.055 9.3833 269.532 8.87295 270.332 8.55271C271.259 8.18216 272.863 7.93999 275.295 7.93999C275.618 7.93999 275.967 7.85507 276.285 7.64306C276.593 7.43732 276.788 7.16873 276.907 6.93078C277.124 6.49734 277.155 6.03659 277.155 5.72C277.155 5.40341 277.124 4.94265 276.907 4.50921C276.788 4.27126 276.593 4.00268 276.285 3.79693C275.967 3.58493 275.618 3.5 275.295 3.5H275.281L275.266 3.50029L269.146 3.62029L269.128 3.62064L269.11 3.62141C265.442 3.78087 262.386 3.86 259.935 3.86C257.726 3.86 254.791 3.78099 251.12 3.62141L251.102 3.6206L251.083 3.62026L244.603 3.50026L244.589 3.5H244.575C243.499 3.5 243.078 4.38961 242.972 4.7056C242.854 5.06012 242.835 5.4362 242.835 5.72C242.835 6.0038 242.854 6.37987 242.972 6.73439C243.078 7.05039 243.499 7.93999 244.575 7.93999C247.094 7.93999 248.735 8.18355 249.658 8.55271L249.699 8.56908L249.741 8.58302C250.536 8.84797 250.969 9.28949 251.203 9.9445L251.218 9.98821L251.236 10.0309C251.591 10.8591 251.835 12.3644 251.835 14.72V70.28C251.835 72.6242 251.595 74.1928 251.222 75.1229Z" stroke="#DE4326" stroke-width="3"/>
+                    <path d="M199.968 36.3801C198.937 36.3801 197.837 36.3678 196.668 36.3431V14.9601C196.668 13.5451 196.774 12.4212 196.963 11.5624C197.155 10.6906 197.41 10.1924 197.633 9.92905L197.651 9.90827L197.668 9.88687C198.123 9.30666 199.141 8.78014 201.288 8.78014C204.703 8.78014 207.119 9.85235 208.776 11.8404L208.784 11.85L208.792 11.8595C210.466 13.8012 211.428 16.8292 211.428 21.2001C211.428 25.8516 210.362 29.5218 208.35 32.3253C206.418 35.0162 203.692 36.3801 199.968 36.3801ZM216.399 37.3479C218.343 36.2609 220.059 34.9978 221.537 33.5526L221.537 33.5524C225.471 29.7042 227.508 25.2098 227.508 20.1201C227.508 14.6073 225.28 10.2826 220.834 7.34822C216.493 4.48269 210.52 3.14014 203.088 3.14014C201.856 3.14014 200.43 3.18114 198.813 3.262C197.208 3.34228 195.977 3.42374 195.139 3.50758C192.785 3.74299 190.515 3.86013 188.328 3.86013C186.2 3.86013 183.304 3.78116 179.633 3.62155L179.615 3.62075L179.596 3.6204L173.236 3.5004L173.222 3.50014H173.208C172.132 3.50014 171.71 4.38974 171.605 4.70574C171.487 5.06026 171.468 5.43633 171.468 5.72013C171.468 6.00394 171.487 6.38001 171.605 6.73453C171.71 7.05052 172.132 7.94013 173.208 7.94013C174.858 7.94013 176.158 8.07553 177.14 8.31684C178.134 8.56092 178.693 8.88633 178.987 9.18079L179.007 9.20043L179.027 9.21932C179.297 9.46941 179.613 9.97238 179.854 10.9202C180.093 11.8564 180.228 13.1113 180.228 14.7201V70.2801C180.228 72.5218 179.951 74.0214 179.529 74.9258L179.519 74.9474L179.509 74.9693C179.201 75.6881 178.683 76.2085 177.851 76.551C176.879 76.8658 175.325 77.0601 173.088 77.0601C172.766 77.0601 172.416 77.1451 172.099 77.357C171.79 77.5628 171.595 77.8313 171.476 78.0693C171.26 78.5027 171.228 78.9635 171.228 79.2801C171.228 79.5968 171.26 80.0575 171.476 80.491C171.595 80.7289 171.79 80.9975 172.099 81.2032C172.416 81.4152 172.766 81.5001 173.088 81.5001C175.803 81.5001 177.982 81.4605 179.616 81.3796L188.339 81.2601C190.315 81.2603 192.086 81.2999 193.653 81.3783L193.657 81.3784C195.325 81.4579 196.71 81.537 197.812 81.6157C200.719 81.8577 203.319 81.9801 205.608 81.9801C210.996 81.9801 215.931 80.9844 220.387 78.9666L220.397 78.9618L220.408 78.9568C224.848 76.8625 228.38 74.0274 230.949 70.432C233.532 66.8156 234.828 62.7503 234.828 58.2801C234.828 53.9801 233.618 50.1113 231.187 46.7253C228.76 43.3458 225.324 40.7488 220.957 38.9006C219.508 38.276 217.989 37.759 216.399 37.3479ZM196.668 70.2801V42.7543C198.144 42.6651 199.724 42.6201 201.408 42.6201C207.099 42.6201 211.092 44.3142 213.689 47.4728C216.366 50.7286 217.788 55.235 217.788 61.1601C217.788 66.3827 216.53 70.0216 214.278 72.3595C212.036 74.687 208.562 75.9801 203.568 75.9801C201.87 75.9801 200.542 75.8536 199.552 75.6277C198.564 75.4025 198.05 75.1093 197.807 74.8772C197.166 74.1695 196.668 72.7686 196.668 70.2801Z" stroke="#DE4326" stroke-width="3"/>
+                    <path d="M101.998 63.5737L106.329 54.0202H133.867L141.648 69.391C141.649 69.3922 141.649 69.3934 141.65 69.3946C142.433 70.9606 143.003 72.2681 143.374 73.3268C143.755 74.411 143.89 75.1323 143.89 75.5602C143.89 75.903 143.818 76.1044 143.743 76.2284C143.673 76.3449 143.551 76.4778 143.303 76.6059C142.728 76.8575 141.536 77.0602 139.51 77.0602C138.913 77.0602 138.294 77.3198 137.901 77.9081C137.581 78.3891 137.53 78.9209 137.53 79.2802C137.53 79.6394 137.581 80.1712 137.901 80.6522C138.294 81.2405 138.913 81.5002 139.51 81.5002C141.152 81.5002 143.345 81.4183 146.076 81.2576C148.938 81.0987 151.347 81.0202 153.31 81.0202C154.792 81.0202 157.282 81.0987 160.801 81.2586C164.163 81.4187 166.672 81.5002 168.31 81.5002C168.82 81.5002 169.451 81.334 169.912 80.7804C170.33 80.2793 170.41 79.6915 170.41 79.2802C170.41 78.8688 170.33 78.281 169.912 77.7799C169.451 77.2263 168.82 77.0602 168.31 77.0602C166.909 77.0602 165.37 76.3181 163.691 74.3475C161.982 72.3406 159.73 68.5677 156.935 62.8969L156.931 62.8888L156.927 62.8807L126.959 3.90334C126.679 3.24594 126.104 2.95047 125.734 2.82713C125.331 2.69299 124.896 2.66016 124.51 2.66016C123.892 2.66016 122.798 2.76279 122.181 3.68811L122.114 3.78884L122.064 3.89902L96.0242 61.139L96.0208 61.1466C93.9539 65.7572 92.1902 69.198 90.7284 71.508C89.2803 73.7163 87.9115 75.1543 86.653 75.9564C85.4195 76.6635 83.8232 77.0602 81.7896 77.0602C81.1926 77.0602 80.5737 77.3198 80.1815 77.9081C79.8608 78.3891 79.8096 78.9209 79.8096 79.2802C79.8096 79.6394 79.8608 80.1712 80.1815 80.6522C80.5737 81.2405 81.1926 81.5002 81.7896 81.5002C83.5104 81.5002 85.7417 81.4185 88.4736 81.2578C91.4948 81.0989 94.0653 81.0202 96.1896 81.0202C98.3946 81.0202 101.005 81.0989 104.026 81.2578C106.752 81.4181 108.866 81.5002 110.35 81.5002C110.86 81.5002 111.491 81.334 111.952 80.7804C112.37 80.2793 112.45 79.6915 112.45 79.2802C112.45 78.8688 112.37 78.281 111.952 77.7799C111.491 77.2263 110.86 77.0602 110.35 77.0602C107.144 77.0602 104.741 76.3179 102.996 74.98C101.406 73.7031 100.57 71.923 100.57 69.4402C100.57 67.7016 101.022 65.7531 101.997 63.5768C101.997 63.5758 101.998 63.5747 101.998 63.5737ZM109.212 47.6602L119.338 25.3213L130.647 47.6602H109.212Z" stroke="#DE4326" stroke-width="3"/>
+                    <path d="M50.6736 70.9309L50.6787 70.9378C53.1765 74.2816 55.3205 76.8433 57.1025 78.5834C57.9923 79.4522 58.8285 80.1526 59.6052 80.6447C60.3538 81.119 61.202 81.5001 62.0805 81.5001H83.4405C84.5168 81.5001 84.9381 80.6105 85.0435 80.2945C85.1617 79.94 85.1805 79.5639 85.1805 79.2801C85.1805 78.9963 85.1617 78.6203 85.0435 78.2657C84.9381 77.9497 84.5168 77.0601 83.4405 77.0601C80.5698 77.0601 77.5166 75.9433 74.256 73.5168C70.9705 71.0718 67.1066 67.0706 62.6623 61.4364C58.7443 56.3782 53.9167 49.5428 48.1758 40.9195C51.4908 38.8805 54.259 36.2751 56.4656 33.1057C59.2856 29.1712 60.7005 24.7479 60.7005 19.8801C60.7005 14.5805 58.4511 10.3918 54.0353 7.4739C49.6909 4.52322 43.7137 3.14014 36.2805 3.14014C34.3402 3.14014 32.5548 3.18054 30.9256 3.262L30.9216 3.26221C29.3945 3.34258 28.1016 3.42331 27.0454 3.50454L27.0393 3.50504C24.116 3.74206 21.3165 3.86013 18.6405 3.86013C16.5121 3.86013 13.6167 3.78116 9.94562 3.62155L9.9272 3.62075L9.90876 3.6204L3.54876 3.5004L3.53461 3.50014H3.52046C2.44406 3.50014 2.02275 4.38985 1.91743 4.70582C1.79927 5.06032 1.78047 5.43637 1.78047 5.72013C1.78047 6.0039 1.79927 6.37995 1.91743 6.73445C2.02275 7.05042 2.44406 7.94013 3.52046 7.94013C5.95227 7.94013 7.557 8.18229 8.48338 8.55285L8.52431 8.56922L8.56612 8.58315C9.361 8.84811 9.79394 9.28964 10.0279 9.94464L11.4405 9.44014L10.0279 9.94464C10.3369 10.81 10.5405 12.3537 10.5405 14.7201V70.2801C10.5405 72.6244 10.2998 74.1929 9.92775 75.1231L9.91731 75.1492L9.90785 75.1756C9.67392 75.8306 9.241 76.2722 8.44613 76.5371L8.43099 76.5422L8.41597 76.5475C7.55663 76.8544 5.94024 77.0601 3.40047 77.0601C3.07799 77.0601 2.72891 77.1451 2.41092 77.3571C2.10231 77.5628 1.9078 77.8314 1.78883 78.0693C1.5721 78.5028 1.54047 78.9635 1.54047 79.2801C1.54047 79.5967 1.5721 80.0575 1.78883 80.491C1.9078 80.7289 2.10231 80.9975 2.41092 81.2032C2.72891 81.4152 3.07799 81.5001 3.40047 81.5001C6.11565 81.5001 8.2948 81.4605 9.928 81.3796L18.641 81.2603L27.7114 81.3796C29.267 81.4606 31.3671 81.5001 34.0005 81.5001C35.0769 81.5001 35.4982 80.6104 35.6035 80.2944C35.7217 79.94 35.7405 79.5639 35.7405 79.2801C35.7405 78.9964 35.7217 78.6203 35.6035 78.2658C35.4982 77.9499 35.0769 77.0601 34.0005 77.0601C31.4853 77.0601 29.8122 76.8591 28.8503 76.5422C28.1625 76.2928 27.7401 75.8672 27.4931 75.1756C27.1851 74.3134 26.9805 72.7333 26.9805 70.2801V45.3249C28.2755 45.3621 29.9789 45.3801 32.0805 45.3801C32.7439 45.3801 33.4034 45.3599 34.059 45.3196C40.482 56.0852 46.0213 64.6278 50.6736 70.9309ZM3.52046 4.94013C3.52084 4.94013 3.52122 4.94013 3.52159 4.94013C3.52122 4.94013 3.52084 4.94013 3.52046 4.94013ZM41.2222 36.1118L41.2184 36.1167C39.6098 38.1757 36.8262 39.3801 32.4405 39.3801C30.358 39.3801 28.5405 39.2842 26.9805 39.0983V14.9601C26.9805 12.3573 27.6168 10.8756 28.5129 10.0849C29.4551 9.25351 31.273 8.66013 34.3605 8.66013C37.5741 8.66013 39.8629 9.74272 41.4544 11.7984C43.0431 13.8505 44.0205 17.9147 44.0205 24.4401C44.0205 30.0807 42.9905 33.8675 41.2222 36.1118Z" stroke="#DE4326" stroke-width="3"/>
+                </svg>
+
+                <p id="sponsored-p"> sponsored by </p>
+
+                <img id="sponsor" src="/images/logo.png" alt="Sponsor">  <!-- World Health Organization. n.d. “The WHO Logo and Emblem.” WHO. Accessed November 4, 2024. https://www.who.int/about/policies/publishing/logo#:~:text=The%20emblem%20consists%20of%20the,medicine%20and%20the%20medical%20profession. -->
+
+                <p id="copyright"> © 2024 RABIES </p>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>   <!-- for gsap animation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>  <!-- for gsap scroll trigger -->
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace-autoloader.js"></script>  <!-- for shoelace UI Components -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/carousel/carousel.js"></script>  <!-- for sl-carousel -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/tooltip/tooltip.js"></script>  <!-- for sl-tool-tip -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/icon-button/icon-button.js"></script>  <!-- for sl-icon -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <!-- for anime.js disappearing text -->
+    <script src="main.js"></script>
+</body>
+</html>
